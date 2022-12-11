@@ -1,0 +1,119 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 0.9375rem;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 960px;
+  /* min-height: 100%; */
+  margin: 6rem 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card {
+  flex-basis: 320px;
+  padding: 3rem;
+}
+
+.card.sedans {
+  background-color: hsl(31, 77%, 52%);
+  flex-grow: 1;
+}
+
+.card.suvs {
+  background-color:  hsl(184, 100%, 22%);
+  flex-grow: 1;
+}
+
+.card.luxury {
+  background-color: hsl(179, 100%, 13%);
+  flex-grow: 1;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+  margin-top: 2rem;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.7;
+  margin-block: 1.75rem;
+}
+
+button {
+  border-radius: 2em;
+  padding: 1em 2em;
+  background-color: hsl(0, 0%, 95%);
+  cursor: pointer;
+}
+
+button.button--sedans {
+  border: 2px solid hsl(31, 77%, 52%);
+  color:hsl(31, 77%, 52%);
+}
+
+button.button--suvs {
+  border: 2px solid hsl(184, 100%, 22%);
+  color:hsl(184, 100%, 22%);
+}
+
+button.button--luxury {
+  border: 2px solid hsl(179, 100%, 13%);
+  color:hsl(179, 100%, 13%);
+}
+
+button:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid hsl(0, 0%, 95%);
+}
+
+@media (min-width: 992px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-inline: auto;
+  }
+
+  .card.sedans {
+    background-color: hsl(31, 77%, 52%);
+  }
+  
+  .card.suvs {
+    background-color:  hsl(184, 100%, 22%);
+  }
+  
+  .card.luxury {
+    background-color: hsl(179, 100%, 13%);
+  }
+}
